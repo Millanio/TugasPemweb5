@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <title>Test</title>
+    <!-- Tag untuk memasukan jquery ke dalam file -->
+    <script src="jquery-3.6.0.min.js"></script>
+    <!-- Pengaturan style kotak yang akan ditampilkan  -->
+    <style media="screen">.rect{fill: yellow;}</style>
+  </head>
+  <body>
+    <!-- Memunculkan kotak 1 yang akan dirubah warna -->
+    <svg width="200" height="150">
+      <rect class="rect" width="150" height="150" />
+    </svg>
+    <!-- Memunculkan kotak 2 yang akan dirubah warna -->
+    <svg width="200" height="150">
+      <rect class="rect" width="150" height="150" />
+    </svg>
+    <!-- Memunculkan kotak 3 yang akan dirubah warna -->
+    <svg width="200" height="150">
+      <rect class="rect" width="150" height="150" />
+    </svg>
+     <!-- Memunculkan kotak 4 yang akan dirubah warna -->
+    <svg width="200" height="150">
+      <rect class="rect" width="150" height="150" /> 
+    </svg>
+    <script type="text/javascript">
+    // Script untuk mengubah warna dengan mengklik 2 kali 
+      $(".rect").on("dblclick", function(){
+        if ($(this).hasClass("red") == true) {
+          $(this).css("fill","yellow");
+          $(this).removeClass("red");}
+          else {
+          $(this).css("fill","red");
+          $(this).addClass("red");
+        }
+      });
+    </script>
+  </body>
+</html>
